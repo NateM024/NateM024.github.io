@@ -10,13 +10,21 @@
 
     height: 4rem;
     width: 80vw;
-    margin-bottom: 15px;
 
     font-size: 25px;
     color: white;
     text-decoration: none; 
     padding-top: 13px;
 
+}
+
+.flex-wrap-certs {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	column-gap: 40px;
+	row-gap: 10px;
+    margin-bottom: 40px;
 }
 
 .cert-box:hover {
