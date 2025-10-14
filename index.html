@@ -22,6 +22,7 @@
 
   <link rel="stylesheet" href="css/global.css" />
   <link rel="stylesheet" href="css/projects.css" />
+  <link rel="stylesheet" href="css/certs.css" />
 
   <script src="js/global.js"></script>
   <script src="js/projects.js"></script>
@@ -35,19 +36,24 @@
     <h1>Featured Projects</h1>
 
     <div class="flex-wrap">
-      <div class="project-box" id="repo-retriever">
+      <div class="project-box" id="worldfacts">
         <p><u>WorldFacts Website</u></p>
         <p>CS209 Database Systems</p>
         <a class="github" href="https://marshalln.etowndb.com/worldFacts/" target="_blank"><i
             class="fa fa-globe"></i></a>
 
         <div class="icons">
-          <i class="fa fa-database" style="font-size:36px"></i>
-          <i class="devicon-php-plain colored"></i>
-          <i class="devicon-html5-plain-wordmark colored"></i>
-          <i class="devicon-css3-plain-wordmark colored"></i>
+          <i class="fa fa-database" style="font-size:36px" title="SQL"></i>
+          <i class="devicon-php-plain colored" title="PHP"></i>
+          <i class="devicon-html5-plain-wordmark colored" title="HTML 5"></i>
+          <i class="devicon-css3-plain-wordmark colored" title="CSS 3"></i>
         </div>
       </div>
+      <!--<script>
+          document.getElementById("worldfacts").addEventListener("click", function () {
+            window.location.href = "Projects/techops/techops.html";
+          });
+      </script> -->
 
       <div class="project-box" id="repo-retriever">
         <p><u>RepoRetriever</u></p>
@@ -56,10 +62,11 @@
             class="devicon-github-original"></i></a>
 
         <div class="icons">
-          <img src="global-media/javascript-plain.svg" alt="javascript" />
-          <i class="devicon-html5-plain-wordmark colored"></i>
-          <i class="devicon-css3-plain-wordmark colored"></i>
-          <i class="devicon-python-plain colored"></i>
+          <img src="global-media/javascript-plain.svg" alt="javascript" title="JavaScript" />
+          <i class="devicon-html5-plain-wordmark colored" title="HTML 5"></i>
+          <i class="devicon-css3-plain-wordmark colored" title="CSS 3"></i>
+          <i class="devicon-python-plain colored" title="Python"></i>
+          <img src="global-media/flask-icon.svg" alt="Flask" title="Flask" />
         </div>
       </div>
 
@@ -70,9 +77,9 @@
             class="devicon-github-original"></i></a>
         
         <div class="icons">
-          <i class="devicon-python-plain colored"></i>
-          <i class="devicon-numpy-original colored"></i>
-          <img src="global-media/matplotlib-icon.svg" alt="matplotlib icon" />
+          <i class="devicon-python-plain colored" title="Python"></i>
+          <i class="devicon-numpy-original colored" title="NumPy"></i>
+          <img src="global-media/matplotlib-icon.svg" alt="matplotlib icon" title="Matplotlib"/>
         </div>
       </div>
 
@@ -83,7 +90,7 @@
             class="devicon-github-original"></i></a>
         
         <div class="icons">
-          <i class="devicon-java-plain colored"></i>
+          <i class="devicon-java-plain colored" title="Java"></i>
         </div>
       </div>
 
@@ -94,7 +101,7 @@
             class="devicon-github-original"></i></a>
         
         <div class="icons">
-          <i class="devicon-java-plain colored"></i>
+          <i class="devicon-java-plain colored" title="Java"></i>
         </div>
       </div>
 
@@ -105,8 +112,8 @@
             class="devicon-github-original"></i></a>
         
         <div class="icons">
-          <i class="devicon-python-plain colored"></i>
-          <img src="global-media/microsoft-azure-logo.svg" alt="microsoft azure logo" />
+          <i class="devicon-python-plain colored" title="Python"></i>
+          <img src="global-media/microsoft-azure-logo.svg" alt="microsoft azure logo" title="Microsoft Azure"/>
         </div>
 
       </div>
@@ -115,7 +122,17 @@
   </div>
   <div class="padded">
     <h1>Certifications</h1>
-    <h2> Coming soon!</h2>
+    <div class="cert-box" id="fcc-python">
+      <a href="https://www.freecodecamp.org/certification/fccc9bd6949-c974-4af1-89cf-c1b16cbebf4d/scientific-computing-with-python-v7">Scientific Computing with Python </a>
+    </div>
+
+    <div class="cert-box" id="kag-pandas">
+      <a href="https://www.kaggle.com/learn/certification/natem024/pandas">Pandas</a>
+    </div>
+      
+    <div class="cert-box" id="cpn-excel">
+      <a href="https://www.coursera.org/account/accomplishments/verify/49EC3L7WZG0R">Introduction to Data Analysis using Microsoft Excel</a>
+    </div>
   </div>
 </body>
 

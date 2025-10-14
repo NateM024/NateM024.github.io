@@ -8,8 +8,9 @@ Check out the live version here: [natem024.github.io](https://natem024.github.io
 
 ## 🚀 Features
 
-- 📂 Projects with links and descriptions
+- 📂 Projects with links
 - 🛠️ Skills and technologies 
-- 📞 Links to my Linkedin and Github repositories
+- 📜 List of certificates with links
+- 📞 Links to my Linkedin and Github
 
 ## 🚧 Work in progress — stay tuned for updates!
