@@ -6,7 +6,7 @@ h1 {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	column-gap: 80px;
+	column-gap: 40px;
 	row-gap: 40px;
 }
 
@@ -21,10 +21,10 @@ h1 {
 	border-color: white;
 
 	padding: 20px 20px 0 20px;
-	min-width: 300px;
-	width: 300px;
-	min-height: 230px;
-	height: 230px;
+	min-width: 350px;
+	width: 350px;
+	min-height: 260px;
+	height: 260px;
 
 	font-size: 25px;
 }
