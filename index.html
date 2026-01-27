@@ -1,143 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nathan Marshall</title>
-
-  <!--Bootstrap-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
-  <!--JQuery-->
-  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
-    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-  <!--Icons-->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!--Roboto Font-->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="css/global.css" />
-  <link rel="stylesheet" href="css/projects.css" />
-  <link rel="stylesheet" href="css/certs.css" />
-
-  <script src="js/global.js"></script>
-  <script src="js/projects.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Coding Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Space+Mono:wght@400;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <nav id="navbar"></nav>
-  <header id="header"></header>
+    <nav>
+        <div class="logo">nate marshall</div>
+        <ul class="nav-links">
+            <li><a href="#about">about</a></li>
+            <li><a href="#projects">projects</a></li>
+            <li><a href="#in-progress">in-progress</a></li>
+            <li><a href="#skills">skills</a></li>
+            <li><a href="#contact">contact</a></li>
+        </ul>
+    </nav>
 
-  <div class="padded">
-    <h1 class="title">Featured Projects</h1>
-
-    <div class="flex-wrap-projects">
-      <div class="project-box" id="worldfacts">
-        <p><u>WorldFacts Website</u></p>
-        <p>CS209 Database Systems</p>
-        <a class="github" href="https://marshalln.etowndb.com/worldFacts/" target="_blank"><i
-            class="fa fa-globe"></i></a>
-
-        <div class="icons">
-          <i class="fa fa-database" style="font-size:36px" title="SQL"></i>
-          <i class="devicon-php-plain colored" title="PHP"></i>
-          <i class="devicon-html5-plain-wordmark colored" title="HTML 5"></i>
-          <i class="devicon-css3-plain-wordmark colored" title="CSS 3"></i>
+    <section class="hero">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <span class="terminal-button close"></span>
+                <span class="terminal-button minimize"></span>
+                <span class="terminal-button maximize"></span>
+                <span class="terminal-title">bash</span>
+            </div>
+            <div class="hero-content" id="terminal-content">
+                <div class="terminal-line">
+                    <span class="prompt">user@localhost:~$</span>
+                    <span class="command"> whoami</span>
+                </div>
+                <div class="terminal-line output">hobby developer & code enthusiast</div>
+                <div class="terminal-line">
+                    <span class="prompt">user@localhost:~$</span>
+                    <span class="command"> cat interests.txt</span>
+                </div>
+                <div class="terminal-line output">building cool stuff • learning new tech • breaking things (and fixing them)</div>
+                <div class="terminal-line" id="input-line">
+                    <span class="prompt">user@localhost:~$</span>
+                    <span id="input-display"></span><span class="cursor"></span>
+                    <input type="text" id="terminal-input" class="terminal-input-hidden" autocomplete="off" spellcheck="false">
+                </div>
+            </div>
         </div>
-      </div>
-      <!--<script>
-          document.getElementById("worldfacts").addEventListener("click", function () {
-            window.location.href = "Projects/techops/techops.html";
-          });
-      </script> -->
+    </section>
 
-      <div class="project-box" id="repo-retriever">
-        <p><u>RepoRetriever</u></p>
-        <p>CS Club Coding Challenge Fall '25</p>
-        <a class="github" href="https://github.com/NateM024/RepoRetriever" target="_blank"><i
-            class="devicon-github-original"></i></a>
-
-        <div class="icons">
-          <img src="global-media/javascript-plain.svg" alt="javascript" title="JavaScript" />
-          <i class="devicon-html5-plain-wordmark colored" title="HTML 5"></i>
-          <i class="devicon-css3-plain-wordmark colored" title="CSS 3"></i>
-          <i class="devicon-python-plain colored" title="Python"></i>
-          <img src="global-media/flask-icon.svg" alt="Flask" title="Flask" />
+    <section id="about" class="about">
+        <h2 class="section-title">about.me</h2>
+        <div class="about-content fade-in">
+            <p>Hey there! I'm Nate — a coding hobbyist who loves tinkering with technology and building projects to solve problems. Started learning to code a while back and got hooked on the feeling of turning ideas into working software.</p>
+            <p>I spend my free time experimenting with new frameworks, contributing to open source when I can, and working on side projects that catch my interest. Most of my work is <code>learning by doing</code> – the best bugs are the ones that teach you something new!</p>
+            <p>This site is basically my digital playground where I showcase the stuff I've built. Some projects are finished, some are works-in-progress, and some are just fun experiments. Feel free to check out my code or reach out if you want to chat about tech!</p>
         </div>
-      </div>
+    </section>
 
-      <div class="project-box" id="blunder-heatmap">
-        <p><u>Chess Blunder Heatmap</u></p>
-        <p>Personal Coding Project</p>
-        <a class="github" href="https://github.com/NateM024/chess-blunder-heatmap" target="_blank"><i
-            class="devicon-github-original"></i></a>
-        
-        <div class="icons">
-          <i class="devicon-python-plain colored" title="Python"></i>
-          <i class="devicon-numpy-original colored" title="NumPy"></i>
-          <img src="global-media/matplotlib-icon.svg" alt="matplotlib icon" title="Matplotlib"/>
+    <section id="projects" class="projects">
+        <h2 class="section-title">projects</h2>
+        <div class="projects-grid">
+            <div class="project-card fade-in">
+                <div class="project-header">
+                    <svg class="folder-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>
+                    </svg>
+                    <h3>repo-retriever</h3>
+                </div>
+                <div class="project-body">
+                    <p>A smart GitHub repository finder that converts natural language queries into optimized GitHub search terms, helping users find relevant repositories based on plain English descriptions.</p>
+                    <p>2nd place winner for elizabethtown coding challenge fall 2025</p>
+                </div>
+                <div class="project-footer">
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">Flask</span>
+                        <span class="tag">API</span>
+                    </div>
+                     <div class="project-links">
+                        <a href="https://github.com/NateM024/RepoRetriever" target="_blank" class="project-link" title="View on GitHub">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card fade-in">
+                <div class="project-header">
+                    <svg class="folder-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>
+                    </svg>
+                    <h3>chess-blunder-heatmap</h3>
+                </div>
+                <div class="project-body">
+                    <p>Python program to provide insights on a user's chess blunders</p>
+                    <p>Hobby project to analyze my online chess games</p>
+                </div>
+                <div class="project-footer">
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">API</span>
+                        <span class="tag">JSON</span>
+                        <span class="tag">Stockfish</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/NateM024/chess-blunder-heatmap" target="_blank" class="project-link" title="View on GitHub">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card fade-in">
+                <div class="project-header">
+                    <svg class="folder-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>
+                    </svg>
+                    <h3>college-schedule-creator</h3>
+                </div>
+                <div class="project-body">
+                    <p>Java schedule creator for elizabethtown college courses</p>
+                    <p>4th place winner for elizabethtown coding challenge spring 2025</p>
+                </div>
+                <div class="project-footer">
+                    <div class="project-tags">
+                        <span class="tag">Java</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/NateM024/EtownCodingChallengeSpring2025" target="_blank" class="project-link" title="View on GitHub">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card fade-in">
+                <div class="project-header">
+                    <svg class="folder-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>
+                    </svg>
+                    <h3>script-sage</h3>
+                </div>
+                <div class="project-body">
+                    <p>An application to read handwritten code and provide meaningful feedback</p>
+                    <p>MADCOMM 2024 1st place winner IU13 regionals | 3rd place winner at state level</p>
+                </div>
+                <div class="project-footer">
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Ollama</span>
+                        <span class="tag">Azure</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Thefraun/MADCOM" target="_blank" class="project-link" title="View on GitHub">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <div class="project-box" id="schedule-creator">
-        <p><u>Etown Schedule Creator</u></p>
-        <p>CS Club Coding Challenge Spring '25</p>
-        <a class="github" href="https://github.com/NateM024/EtownCodingChallengeSpring2025" target="_blank"><i
-            class="devicon-github-original"></i></a>
-        
-        <div class="icons">
-          <i class="devicon-java-plain colored" title="Java"></i>
+    <section id="in-progress" class="in-progress">
+        <h2 class="section-title">in-progress</h2>
+        <div class="in-progress-content">
+            <p class="section-subtitle">// stuff I'm currently tinkering with</p>
+            <div class="in-progress-grid">
+                <div class="progress-card fade-in">
+                    <div class="progress-header">
+                        <div class="status-badge">
+                            <span class="status-dot"></span>
+                            <span>active</span>
+                        </div>
+                        <h3>chess-puzzle-creator</h3>
+                    </div>
+                    <p>Building a website that generates puzzles from missed advantages from a user's online chess.com or lichess games</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="--progress: 60%">
+                            <span class="progress-label">~5% complete</span>
+                        </div>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">Javascript</span>
+                        <span class="tag">API</span>
+                    </div>
+                </div>
+
+                <!-- <div class="progress-card fade-in">
+                    <div class="progress-header">
+                        <div class="status-badge">
+                            <span class="status-dot"></span>
+                            <span>active</span>
+                        </div>
+                        <h3>habit-tracker-app</h3>
+                    </div>
+                    <p>A simple habit tracking app with data visualization. Trying to learn more about state management and localStorage. The UI is done but the logic needs work.</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="--progress: 40%">
+                            <span class="progress-label">~40% complete</span>
+                        </div>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Chart.js</span>
+                    </div>
+                </div> -->
+            </div>
         </div>
-      </div>
+    </section>
 
-      <div class="project-box" id="loan-comparer">
-        <p><u>Loan Comparison Tool</u></p>
-        <p>CS Club Coding Challenge Fall '24</p>
-        <a class="github" href="https://github.com/NateM024/CodingChallenge2024" target="_blank"><i
-            class="devicon-github-original"></i></a>
-        
-        <div class="icons">
-          <i class="devicon-java-plain colored" title="Java"></i>
+    <section id="skills" class="skills">
+        <h2 class="section-title">skills</h2>
+        <div class="skills-container fade-in">
+            <div class="code-block">
+                <span class="code-line" data-line="1"><span class="keyword">const</span> <span class="property">skills</span> = {</span>
+                <span class="code-line" data-line="2">  <span class="property">languages</span>: [<span class="string">"Java"</span>, <span class="string">"Python"</span>, <span class="string">"HTML/CSS"</span>, <span class="string">"C"</span>,<span class="string">"Assembly"</span>],</span>
+                <span class="code-line" data-line="3">  <span class="property">frameworks</span>: [<span class="string">"Swift"</span>],</span>
+                <span class="code-line" data-line="4">  <span class="property">tools</span>: [<span class="string">"Git"</span>, <span class="string">"VS Code"</span>, <span class="string">"Claude"</span>, <span class="string">"Jupyter Notebook"</span>],</span>
+                <span class="code-line" data-line="5">  <span class="property">databases</span>: [<span class="string">"SQL"</span>,  <span class="string">"MySQL"</span>,<span class="string">"MongoDB"</span>,<span class="string">"SQLite"</span>],</span>
+                <span class="code-line" data-line="7">  <span class="property">interests</span>: [<span class="string">"Web Dev"</span>, <span class="string">"APIs"</span>, <span class="string">"AI/ML"</span>]</span>
+                <span class="code-line" data-line="8">};</span>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <div class="project-box" id="script-sage">
-        <p><u>Script Sage</u></p>
-        <p>PA MADCOM</p>
-        <a class="github" href="https://github.com/Thefraun/MADCOM" target="_blank"><i
-            class="devicon-github-original"></i></a>
-        
-        <div class="icons">
-          <i class="devicon-python-plain colored" title="Python"></i>
-          <img src="global-media/microsoft-azure-logo.svg" alt="microsoft azure logo" title="Microsoft Azure"/>
+    <section id="contact" class="contact">
+        <h2 class="section-title">contact</h2>
+        <div class="contact-content fade-in">
+            <p>Want to chat about a project, collaborate on something, or just talk tech? Hit me up!</p>
+            <div class="contact-links">
+                <a href="https://github.com/NateM024" target="_blank" class="contact-link">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/natemarshall5/" target="_blank" class="contact-link">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                    </svg>
+                    LinkedIn
+                </a>
+            </div>
         </div>
+    </section>
 
-      </div>
-      </div>
-    </div>
+    <footer>
+        <p>// built by innovation from creativity</p>
+        <p style="margin-top: 0.5rem; font-size: 0.85rem;">© 2026 • view source on GitHub</p>
+    </footer>
 
-    <div class="padded">
-      <h1 class="title">Certifications</h1>
-      <div class="flex-wrap-certs">
-        <div class="cert-box" id="fcc-python">
-          <a href="https://www.freecodecamp.org/certification/fccc9bd6949-c974-4af1-89cf-c1b16cbebf4d/scientific-computing-with-python-v7">Scientific Computing with Python </a>
-        </div>
-
-        <div class="cert-box" id="kag-pandas">
-          <a href="https://www.kaggle.com/learn/certification/natem024/pandas">Pandas</a>
-        </div>
-          
-        <div class="cert-box" id="cpn-excel">
-          <a href="https://www.coursera.org/account/accomplishments/verify/49EC3L7WZG0R">Introduction to Data Analysis using Microsoft Excel</a>
-        </div>
-      </div>
-  </div>
-  </div>
-
+    <script src="script.js"></script>
 </body>
-
 </html>
