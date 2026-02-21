@@ -488,7 +488,15 @@ nav {
     background: #ffb800;
 }
 
-.status-dot {
+.status-dot-active {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: red;
+    animation: pulse-dot 2s ease-in-out infinite;
+}
+
+.status-dot-inactive {
     width: 8px;
     height: 8px;
     border-radius: 50%;
