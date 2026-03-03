@@ -545,6 +545,13 @@ nav {
     padding-right: 0.75rem;
 }
 
+.progress-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
 .progress-label {
     font-family: 'Fira Code', monospace;
     font-size: 0.8rem;
